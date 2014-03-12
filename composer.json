@@ -14,7 +14,10 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+        "psr-4": {
+            "Acme\\": "app/Acme"
+        }
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -32,5 +35,8 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+	"require-dev": {
+		"phpspec/phpspec": "2.0.*@dev"
+	}
 }
