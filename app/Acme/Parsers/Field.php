@@ -47,7 +47,7 @@ class Field {
     {
         list($property, $type) = explode(':', $declaration);
 
-        if ( ! $this->typeIsRecognized($type))
+        if ( ! $this->isTypeRecognized($type))
         {
             throw new UnrecognizedType;
         }
@@ -63,7 +63,7 @@ class Field {
      * @param $type
      * @return bool
      */
-    private function typeIsRecognized($type)
+    private function isTypeRecognized($type)
     {
         // If more complex, extract this to a field, above.
         return $type == 'string' or $type == 'text';
