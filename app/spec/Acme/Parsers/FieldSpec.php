@@ -29,7 +29,7 @@ class FieldSpec extends ObjectBehavior
         ]);
     }
 
-    function it_squawks_if_the_provided_file_type_is_not_recognized()
+    function it_squawks_if_the_provided_field_type_is_not_recognized()
     {
         $this->shouldThrow('Acme\Parsers\Exceptions\UnrecognizedType')
              ->duringParse('title:foobar');
